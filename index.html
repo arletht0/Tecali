@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Descubre Tecali de Herrera</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <strong>Descubre Tecali</strong>
+  <nav aria-label="Principal">
+    <a href="#inicio">Inicio</a>
+    <a href="#historia">Historia</a>
+    <a href="#visitar">Qué visitar</a>
+    <a href="#ruta">Mi ruta</a>
+    <a href="#eventos">Eventos</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" id="inicio" data-pose="saludo"
+           data-dice="¡Hola! Soy tu guía. Vamos a conocer el pueblo de la casa de piedra.">
+    <div class="wrap">
+      <div>
+        <h1>Tecali de Herrera, Pueblo Mágico</h1>
+        <p>Ónix, mármol, un convento del siglo XVI y uno de los teatros más antiguos de América. A 44 km de la ciudad de Puebla.</p>
+        <a class="btn" href="#test">Empezar el recorrido</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="test" data-pose="pensando" data-dice="Dime qué te gusta y te recomiendo por dónde empezar.">
+    <div class="wrap">
+      <h2>¿Qué te gusta más?</h2>
+      <p>Elige una opción y te sugerimos un lugar.</p>
+      <div class="opciones" role="group" aria-label="Intereses">
+        <button type="button" data-interes="historia" aria-pressed="false">Historia</button>
+        <button type="button" data-interes="cultura" aria-pressed="false">Cultura y teatro</button>
+        <button type="button" data-interes="artesanias" aria-pressed="false">Artesanías</button>
+        <button type="button" data-interes="comida" aria-pressed="false">Sabores</button>
+      </div>
+      <p id="resultado" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section class="historia" id="historia" data-pose="señalando" data-dice="Esta es la historia de la casa de piedra.">
+    <div class="wrap">
+      <h2>Historia de Tecali</h2>
+      <p>Tecali viene del náhuatl <i>tetl</i> (piedra) y <i>calli</i> (casa): "donde están las casas de piedra". Y la piedra sigue siendo su identidad.</p>
+      <ul class="hitos">
+        <li><b>Siglo XII:</b> grupos nahuas y chichimecas fundan el poblado, que tributaba a los mexicas.</li>
+        <li><b>Antes de la conquista:</b> aparece en la Matrícula de Tributos con el nombre de Tecalco, "la casa de piedra".</li>
+        <li><b>1520:</b> Francisco de Montaño se instala como el primer comendador del lugar.</li>
+        <li><b>Siglo XVI:</b> se construyen el teatro Corral de Comedias (1540), el ex convento franciscano (1569-1580) y un aljibe para almacenar agua de lluvia.</li>
+        <li><b>Siglo XIX:</b> se le da el nombre oficial de Tecali de Herrera en honor del coronel Ambrosio Herrera.</li>
+        <li><b>Hoy:</b> Pueblo Mágico y referente del trabajo artesanal en ónix y mármol.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="visitar" data-pose="sorprendido" data-dice="¡Mira todo lo que hay! Agrega lo que quieras a tu ruta.">
+    <div class="wrap">
+      <h2>Qué visitar</h2>
+      <p>Cada lugar tiene su ficha. Agrégalo a tu ruta con el botón.</p>
+      <div class="lugares" id="lugares">
+        <article class="ficha" data-id="convento" data-tipo="historia">
+          <div class="foto"><span>Foto: img/convento.jpg</span><img src="img/convento.jpg" alt="Ex convento franciscano de Santiago Apóstol" onerror="this.remove()"></div>
+          <div class="cuerpo">
+            <h3>Ex convento franciscano de Santiago Apóstol</h3>
+            <p>Construido entre 1569 y 1580, es considerado una joya de la arquitectura renacentista en México.</p>
+            <dl><dt>Dónde:</dt> <dd>En la plaza principal.</dd><dt>Horario:</dt> <dd>Confirma en el Facebook del Gobierno Municipal de Tecali de Herrera.</dd><dt>Dato curioso:</dt> <dd>Tecali era paso obligado en el camino de Veracruz a la Ciudad de México.</dd></dl>
+            <button class="btn" type="button" data-agregar aria-pressed="false">Agregar a mi ruta</button>
+          </div>
+        </article>
+        <article class="ficha" data-id="teatro" data-tipo="cultura">
+          <div class="foto"><span>Foto: img/teatro.jpg</span><img src="img/teatro.jpg" alt="Teatro Gregorio de Gante" onerror="this.remove()"></div>
+          <div class="cuerpo">
+            <h3>Teatro Gregorio de Gante</h3>
+            <p>Antiguo Corral de Comedias de 1540, considerado uno de los espacios teatrales más antiguos de América.</p>
+            <dl><dt>Dónde:</dt> <dd>En la plaza principal, junto al ex convento.</dd><dt>Horario:</dt> <dd>Confirma en el Facebook del Gobierno Municipal de Tecali de Herrera.</dd><dt>Dato curioso:</dt> <dd>Participa en la Noche de Museos de Puebla.</dd></dl>
+            <button class="btn" type="button" data-agregar aria-pressed="false">Agregar a mi ruta</button>
+          </div>
+        </article>
+        <article class="ficha" data-id="talleres" data-tipo="artesanias">
+          <div class="foto"><span>Foto: img/talleres.jpg</span><img src="img/talleres.jpg" alt="Taller de ónix y mármol" onerror="this.remove()"></div>
+          <div class="cuerpo">
+            <h3>Talleres de ónix y mármol</h3>
+            <p>Aquí el oficio sigue vivo: puedes ver cómo se talla la piedra y comprar piezas y muebles directo con los artesanos.</p>
+            <dl><dt>Dónde:</dt> <dd>En el primer cuadro del pueblo y sus avenidas principales.</dd><dt>Horario:</dt> <dd>Varía por taller; pregunta en cada uno.</dd><dt>Dato curioso:</dt> <dd>En la época virreinal, el ónix se usó como sustituto del vidrio en ventanas de iglesias de Puebla.</dd></dl>
+            <button class="btn" type="button" data-agregar aria-pressed="false">Agregar a mi ruta</button>
+          </div>
+        </article>
+        <article class="ficha" data-id="mezcal" data-tipo="comida">
+          <div class="foto"><span>Foto: img/mezcal.jpg</span><img src="img/mezcal.jpg" alt="Taller artesanal de mezcal" onerror="this.remove()"></div>
+          <div class="cuerpo">
+            <h3>Mezcal artesanal</h3>
+            <p>Además de piedra, Tecali tiene talleres artesanales de mezcal que se suman a su oferta turística.</p>
+            <dl><dt>Dónde:</dt> <dd>Pregunta por los talleres en el Gobierno Municipal.</dd><dt>Horario:</dt> <dd>Varía por taller.</dd><dt>Dato curioso:</dt> <dd>Hoy se promueve junto al ónix y el mármol como parte de las rutas turísticas del municipio.</dd></dl>
+            <button class="btn" type="button" data-agregar aria-pressed="false">Agregar a mi ruta</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="ruta" id="ruta" data-pose="señalando" data-dice="Esta es tu ruta. Marca cada lugar cuando lo visites y gana sellos.">
+    <div class="wrap">
+      <h2>Mi ruta</h2>
+      <p class="pasaporte" id="pasaporte">Pasaporte: 0 sellos</p>
+      <ol id="lista-ruta"></ol>
+      <p class="vacio" id="vacio">Todavía no agregas lugares. Ve a "Qué visitar".</p>
+      <div class="mapa">
+        <iframe title="Mapa de Tecali de Herrera" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Tecali+de+Herrera,+Puebla&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="eventos" id="eventos" data-pose="despedida" data-dice="¡Vuelve en estas fechas! Te esperamos.">
+    <div class="wrap">
+      <h2>Eventos y fiestas</h2>
+      <ul>
+        <li><b>Finales de julio:</b> Feria Patronal de Santiago Apóstol, con actividades religiosas y artísticas (en 2026 fue del 24 al 28 de julio).</li>
+        <li><b>Septiembre:</b> Noche de Museos de Puebla, donde abre el Teatro Gregorio de Gante (en 2026 fue el 12 de septiembre).</li>
+        <li><b>Todo el año:</b> consulta el programa actualizado en el Facebook del Gobierno Municipal de Tecali de Herrera.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Proyecto de Expresión Oral · [Nombres del equipo]<br>
+  Fuentes: Plan de Desarrollo Municipal de Tecali de Herrera (Gobierno de Puebla), México Desconocido, INAH, Food and Pleasure, Gobierno Municipal de Tecali de Herrera.
+</footer>
+
+<!-- Personaje guía: imágenes PNG transparentes en img/ con estos nombres:
+     saludo.png, pensando.png, señalando.png, sorprendido.png, despedida.png -->
+<aside class="guia" aria-live="polite">
+  <div class="globo" id="globo">¡Hola!</div>
+  <div class="personaje" id="personaje" aria-hidden="true"><span id="emoji">🧑‍🎨</span></div>
+</aside>
+
+<script>
+  /* ---------- Personaje: cambia pose y mensaje según la sección visible ---------- */
+  var globo = document.getElementById("globo");
+  var personaje = document.getElementById("personaje");
+
+  function setPose(pose, texto) {
+    if (texto) globo.textContent = texto;
+    var img = new Image();
+    img.onload = function () { personaje.innerHTML = ""; personaje.appendChild(img); };
+    img.src = "img/" + pose + ".png";
+  }
+
+  var obs = new IntersectionObserver(function (entradas) {
+    entradas.forEach(function (e) {
+      if (e.isIntersecting) setPose(e.target.dataset.pose, e.target.dataset.dice);
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll("section[data-pose]").forEach(function (s) { obs.observe(s); });
+
+  /* ---------- Test de intereses ---------- */
+  var sugerencias = {
+    historia: "Empieza por el ex convento franciscano, en la plaza principal.",
+    cultura: "Ve al Teatro Gregorio de Gante, uno de los más antiguos de América.",
+    artesanias: "Recorre los talleres de ónix y mármol del primer cuadro.",
+    comida: "Prueba el mezcal artesanal de los talleres del municipio."
+  };
+  var botonesInteres = document.querySelectorAll("[data-interes]");
+  botonesInteres.forEach(function (b) {
+    b.addEventListener("click", function () {
+      botonesInteres.forEach(function (x) { x.setAttribute("aria-pressed", "false"); });
+      b.setAttribute("aria-pressed", "true");
+      var tipo = b.dataset.interes;
+      document.getElementById("resultado").textContent = sugerencias[tipo];
+      document.querySelectorAll(".ficha").forEach(function (f) {
+        f.classList.toggle("destacada", f.dataset.tipo === tipo);
+      });
+      setPose("sorprendido", "¡Buena elección! Te marqué el lugar en Qué visitar.");
+    });
+  });
+
+  /* ---------- Ruta y pasaporte (se guardan en el navegador) ---------- */
+  var estado = { ruta: [], vistos: [] };
+  try {
+    var guardado = JSON.parse(localStorage.getItem("tecaliEstado"));
+    if (guardado) estado = guardado;
+  } catch (e) {}
+
+  function guardar() {
+    try { localStorage.setItem("tecaliEstado", JSON.stringify(estado)); } catch (e) {}
+  }
+
+  function nombreDe(id) {
+    return document.querySelector('[data-id="' + id + '"] h3').textContent;
+  }
+
+  function pintar() {
+    var lista = document.getElementById("lista-ruta");
+    lista.innerHTML = "";
+    estado.ruta.forEach(function (id) {
+      var li = document.createElement("li");
+      var visto = estado.vistos.indexOf(id) > -1;
+      if (visto) li.className = "visto";
+      var span = document.createElement("span");
+      span.textContent = nombreDe(id);
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.textContent = visto ? "Visitado ✓" : "Marcar visitado";
+      btn.addEventListener("click", function () {
+        var i = estado.vistos.indexOf(id);
+        if (i > -1) estado.vistos.splice(i, 1); else estado.vistos.push(id);
+        guardar(); pintar();
+        if (estado.vistos.length && estado.vistos.length === estado.ruta.length) {
+          setPose("sorprendido", "¡Completaste tu ruta! Eres explorador de Tecali.");
+        }
+      });
+      li.appendChild(span); li.appendChild(btn);
+      lista.appendChild(li);
+    });
+    document.getElementById("vacio").hidden = estado.ruta.length > 0;
+    document.getElementById("pasaporte").textContent =
+      "Pasaporte: " + estado.vistos.length + " de " + estado.ruta.length + " sellos";
+    document.querySelectorAll("[data-agregar]").forEach(function (b) {
+      var id = b.closest(".ficha").dataset.id;
+      var esta = estado.ruta.indexOf(id) > -1;
+      b.setAttribute("aria-pressed", esta);
+      b.textContent = esta ? "En mi ruta ✓" : "Agregar a mi ruta";
+    });
+  }
+
+  document.querySelectorAll("[data-agregar]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var id = b.closest(".ficha").dataset.id;
+      var i = estado.ruta.indexOf(id);
+      if (i > -1) { estado.ruta.splice(i, 1); estado.vistos = estado.vistos.filter(function (v) { return v !== id; }); }
+      else estado.ruta.push(id);
+      guardar(); pintar();
+    });
+  });
+
+  pintar();
+</script>
+</body>
+</html>
